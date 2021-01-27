@@ -1,7 +1,19 @@
 package question3;
 
-public class Phone {
+public class Phone extends Device implements MobileNetwork {
     private int batteryLevel;
+    private String OperatingSystem;
+
+    public Phone() {
+    }
+
+    public Phone(int width, int height) {
+        super(width,height);
+    }
+
+    public Phone(String operatingSystem) {
+        OperatingSystem = operatingSystem;
+    }
 
     public boolean isTactile() {
         return true;
@@ -15,4 +27,18 @@ public class Phone {
         this.batteryLevel = batteryLevel;
     }
 
+    @Override
+    public String getOperatingSystem() {
+        return OperatingSystem;
+    }
+
+    @Override
+    public void setOperatingSystem(String operatingSystem) {
+        OperatingSystem = operatingSystem;
+    }
+
+    @Override
+    public String networkType() {
+        return "4G";
+    }
 }

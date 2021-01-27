@@ -6,6 +6,14 @@ public abstract class Device {
     private boolean isOn = false;
     private String operatingSystem;
 
+    public Device(int width, int height) {
+        this.width = width;
+        this.height = height;
+    }
+
+    public Device() {
+    }
+
     public void turnOn() {
         this.isOn = true;
     }
